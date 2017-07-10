@@ -722,7 +722,7 @@ void GammaJetFinalizer::runAnalysis() {
     // Electron veto. No electron close to the photon
     bool keepEvent = true;
 
-//  if ( h_hotjets->GetBinContent(h_hotjets->FindBin(fullinfo.etaAK4_j1, fullinfo.phiAK4_j1)) > 0) keepEvent=false; // -10 good, +10 bad
+//  if ( !mIsMC && h_hotjets->GetBinContent(h_hotjets->FindBin(fullinfo.etaAK4_j1, fullinfo.phiAK4_j1)) > 0) keepEvent=false; // -10 good, +10 bad
 
   //  for (int j = 0; j < electrons.n; j++) {
   //    double deltaR = fabs(reco::deltaR(photon.eta, photon.phi, electrons.eta[j], electrons.phi[j]));
